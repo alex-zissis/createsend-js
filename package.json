@@ -1,0 +1,21 @@
+{
+    "name": "createsend-js",
+    "version": "0.1.0",
+    "description": "A modern wrapper for the CreateSend API in Node.JS",
+    "main": "dist/index.js",
+    "repository": "https://github.com/alex-zissis/createsend-js",
+    "author": "Alex Zissis <alex@alexzissis.tech>",
+    "license": "MIT",
+    "private": false,
+    "dependencies": {
+        "axios": "^0.19.2"
+    },
+    "devDependencies": {
+        "@types/node": "^13.13.0",
+        "typescript": "^3.8.3"
+    },
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch"
+    }
+}
