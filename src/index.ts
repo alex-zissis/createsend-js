@@ -1,3 +1,1 @@
-import {CreateSend} from './CreateSend';
-
-export default CreateSend;
+export {CreateSend} from './CreateSend';
