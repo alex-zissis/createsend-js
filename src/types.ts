@@ -96,6 +96,15 @@ export interface ITransactionalEmailStatistics {
     Clicked: number;
 }
 
+export interface IAddSubscriberProps {
+    EmailAddress: string;
+    Name: string;
+    CustomFields?: {key: string; value: string}[];
+    Resubscribe?: boolean;
+    RestartSubscriptionBasedAutoresponders: boolean;
+    ConsentToTrack: 'Yes' | 'No' | 'Unchanged';
+}
+
 export interface IAccount {
     getClients: () => Promise<IClient[]>;
     getBillingDetails: () => Promise<IBillingDetails>;
@@ -110,6 +119,10 @@ export interface IClients {
 
 export interface ILists {
     createList: (clientId: string, createListProps: ICreateListProps) => Promise<string>;
+}
+
+export interface ISubscribers {
+    addSubscriber: (listId: string, addSubscriberProps: IAddSubscriberProps) => Promise<string>;
 }
 
 export interface ITransactional {
