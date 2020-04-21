@@ -46,8 +46,8 @@ export interface ISmartEmailDetails {
 
 export interface ISmartEmailSendProps {
     To: string[] | null;
-    CC: string[] | null;
-    BCC: string[] | null;
+    CC?: string[] | null;
+    BCC?: string[] | null;
     Attachments?: {
         Content: string;
         Name: string;
@@ -101,7 +101,7 @@ export interface IAddSubscriberProps {
     Name: string;
     CustomFields?: {key: string; value: string}[];
     Resubscribe?: boolean;
-    RestartSubscriptionBasedAutoresponders: boolean;
+    RestartSubscriptionBasedAutoresponders?: boolean;
     ConsentToTrack: 'Yes' | 'No' | 'Unchanged';
 }
 
